@@ -23,4 +23,10 @@ if api.requires_2fa:
         print("Failed to verify verification code")
         sys.exit(1)
 
-print(api.photos.all)
+print(api.photos.albums.get())
+
+
+#for photo in api.photos.all:
+#    print(photo.filename, photo.created, sep=' - ')
+
+
