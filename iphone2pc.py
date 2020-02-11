@@ -29,8 +29,13 @@ print(albums)
 photos = icloud.photos.albums['All Photos']
 print(len(photos))
 
+dt_list = ('201801','201802','201803')
+#dt_list = ('201804','201805','201806')
+#dt_list = ('201807','201808','201807')
+#dt_list = ('201810','201811','201812')
+
 for photo in photos:
-    if photo.created.strftime('%Y%m') in ('201803','201804','201805','201806'):
+    if photo.created.strftime('%Y%m') in dt_list:
         photo_created = photo.created.strftime('%Y%m%d')
         photo_added = photo.added_date.strftime('%Y%m%d')
         print(photo, photo.filename, photo.item_type, photo_created, photo_added)
